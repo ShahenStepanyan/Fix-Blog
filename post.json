@@ -1,0 +1,42 @@
+{
+  "post": [
+    {
+      "userId": 1,
+      "id": 1,
+      "title": " aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum",
+      "creator": "admin123@gmail.com"
+    },
+    {
+      "title": "hello",
+      "body": "again",
+      "id": 2,
+      "creator": "shag@mail.ru"
+    },
+    {
+      "title": "asd",
+      "body": "asd",
+      "id": 3,
+      "creator": "admin123@gmail.com"
+    },
+    {
+      "title": "sadsad",
+      "body": "asdsada",
+      "id": 4,
+      "creator": "admin123@gmail.com"
+    },
+    {
+      "title": "Lorem ipsum dolor sit amet, consectetur",
+      "body": "am in malesuada neque. Aliquam eget ante facilisis, blandit neque eget, pharetra tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; ",
+      "creator": "shag@mail.ru",
+      "id": 5
+    },
+    {
+      "title": "am in malesuada neque. Aliquam eget ante facilisis, blandit neque eget, pharetra tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; ",
+      "body": "am in malesuada neque. Aliquam eget ante facilisis, blandit neque eget, pharetra tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; ",
+  
+      "id": 6,
+      "creator": "shag@mail.ru"
+    }
+  ]
+}

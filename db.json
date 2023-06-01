@@ -1,0 +1,20 @@
+{
+  "user": [
+    {
+      "id": "admin123@gmail.com",
+      "name": "BOT",
+      "password": "admin123",
+      "phone": "",
+      "country": "Armenia",
+      "gender": "male"
+    },
+    {
+      "id": "shag@mail.ru",
+      "name": "BOT",
+      "password": "shag",
+      "phone": "",
+      "country": "Armenia",
+      "gender": "male"
+    }
+  ]
+}
