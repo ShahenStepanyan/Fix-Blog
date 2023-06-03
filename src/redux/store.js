@@ -6,14 +6,16 @@ const store = createStore(function (state,action){
        return  {
            ...state,
            currentUser: {
-               name: action.payload.name
+               name: action.payload.name,
+               id: action.payload.id
            }
        }
    }
    return state
 }, {
     currentUser: {
-        name: ""
+        name: "",
+        id: 0,
     }
 })
 

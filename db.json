@@ -1,20 +1,22 @@
 {
   "user": [
     {
-      "id": "admin123@gmail.com",
-      "name": "BOT",
+      "id": "1",
+      "email": "admin123@gmail.com",
       "password": "admin123",
       "phone": "",
       "country": "Armenia",
-      "gender": "male"
+      "gender": "male",
+      "date": "25.05.2023"
     },
     {
-      "id": "shag@mail.ru",
-      "name": "BOT",
-      "password": "shag",
+      "id": "2",
+      "email": "admin@mail.ru",
+      "password": "admin1",
       "phone": "",
       "country": "Armenia",
-      "gender": "male"
+      "gender": "male",
+      "date": "25.05.2023"
     }
   ]
 }

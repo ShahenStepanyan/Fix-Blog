@@ -2,7 +2,9 @@ import axios from 'axios';
 import React from 'react'
 import { useEffect , useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { apiInfo } from "./api/Api";
+import {apiInfo} from "../../api/Api";
+import Header from "../../components/Header/Header";
+
 
 
 function Update() {
@@ -30,6 +32,7 @@ function Update() {
 
   return (
     <div >
+        <Header/>
         <div >
             <form onSubmit={handleSubmit}>
                 <div>
