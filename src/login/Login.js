@@ -53,7 +53,7 @@ function Login(props) {
       <h2>Login</h2>
       <form onSubmit={handleLogin}>
         <div>
-          <label>Username:</label>
+          <label>Email:</label>
           <input
             type="text"
             value={username}

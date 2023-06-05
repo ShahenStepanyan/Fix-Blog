@@ -1,9 +1,10 @@
 import axios from "axios";
 import React from "react";
+import '../../App.css'
 import { useState ,  } from "react";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { Link, useNavigate,  useSearchParams } from "react-router-dom";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
@@ -11,12 +12,17 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Header from "../../components/Header/Header";
-import 'bootstrap/dist/css/bootstrap.min.css'
+import { makeStyles } from '@material-ui/core';
 
-
+const useStyles = makeStyles({
+  active: {
+    backgroundColor: "blue"
+  }
+})
 
 function Home() {
-
+  const classes = useStyles()
+  
   const [pageInfo, setPageInfo] = useSearchParams();
   const name = useSelector(function (state) {
     return state.currentUser.name;
@@ -53,20 +59,24 @@ function Home() {
       <Header/>
       <h2>Blog</h2>
       <Link to='/create'>Add Post +</Link>
-      <table className='table'>
-        <thead></thead>
-        <tbody>
+      
+        
+       
           {records.map((d, i) => (
-            <tr key={i}>
+            <div key={i}>
               <Card sx={{ maxWidth: 700 }}>
-                <CardMedia alt='green iguana' height='140' />
+                <CardMedia image={undefined} alt='green iguana' height='140' 
+                  title="Profile Image"
+                  className={undefined}
+                  component='div'
+                />
                 <CardContent>
                   <Typography gutterBottom variant='h5' component='div'>
                     <Link
                       style={{ color: "black", textDecoration: "none" }}
                       to={`/read/${d.id}`}
                     >
-                      {d.body}
+                      {d.title}
                     </Link>
                   </Typography>
                   <Typography variant='body2' color='text.secondary'>
@@ -74,7 +84,7 @@ function Home() {
                   </Typography>
                 </CardContent>
               </Card>
-              <td>
+             
                 <Stack spacing={1} direction='row'>
                   <Button disabled={tesdel(d.creator)} variant='outlined'>
                     <Link
@@ -95,34 +105,33 @@ function Home() {
                     Delete
                   </Button>
                 </Stack>
-              </td>
-            </tr>
+              </div>
           ))}
-        </tbody>
-      </table>
+       
       <nav style={{ marginTop: "25px", marginBottom: "25px" }}>
-        <ul className="pagination" style={{ display: "inline" }}>
+        <ul className="pagination">
           {numbers.map((n, i) => {
             return (
-              <>
-            
+              <div key={i} className="cont">
+                
                 <li 
-                  className={`page-item ${currentPage === n ? 'active' : ''}`}
-                 style={{width: "50px", cursor: "pointer"}}
+                 className={`${currentPage === n ? classes.active : 'norm'}`}
+                 style={{width: "70px", cursor: "pointer", height: "30px", borderRadius: "5%"}}
                   key={i}
                   
-                  onClick={() => changeCPage(n)}
-                >
-                  <span onClick={() => {
+                  onClick={() => {
                     setPageInfo({page: n})
-                    localStorage.setItem(pageInfo, n)
-                    console.log(localStorage.getItem(pageInfo))
-                  }} className="page-link">{n}</span>
+                    localStorage.setItem("pageinfo", n)
+                    console.log(localStorage.getItem("pageinfo"))
+                    changeCPage(n)
+                  }}
+                >
+                  <span>{n}</span>
                 </li>
                  
                 
                 
-              </>
+              </div>
             );
           })}
         </ul>
